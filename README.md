@@ -15,3 +15,4 @@ Then.....
 	- Have a clickable “like button” that allows me to add likes to the cocktail 
 
 
+mockup: ![cocktail app mockup](coctail mock 1.jpg)
