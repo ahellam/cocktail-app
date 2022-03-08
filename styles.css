@@ -26,3 +26,12 @@
   #searchForm {
     text-align: center;
   }
+
+  .cocktailCard{
+      text-align: center;
+  }
+
+  .cocktailImg{
+      width: 400px;
+      height: 400px;
+  }
