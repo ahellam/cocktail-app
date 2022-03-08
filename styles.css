@@ -1,0 +1,28 @@
+/* .headerContainer{
+    text-align: center;
+} */
+
+.headerText{
+    font-size: 400%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: auto;
+    text-align: center;
+    border-style: double;
+    border-width: .5ch;
+    
+}
+/* trying to make this image centered on the page */
+.logoImg {               
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  #searchTitle {
+      text-align: center;
+  }
+
+  #searchForm {
+    text-align: center;
+  }
