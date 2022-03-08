@@ -27,8 +27,18 @@
     text-align: center;
   }
 
+  .randomButton{
+    padding: 1px 10px;
+    font-size: 15px;
+
+    /* need to figure out how to center! */
+  }
+
   .cocktailCard{
-      text-align: center;
+    text-align: center;
+    border-style: double;
+    border-width: .5ch;
+
   }
 
   .cocktailImg{

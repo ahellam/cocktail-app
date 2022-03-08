@@ -1,8 +1,12 @@
 const searchForm = document.getElementById('searchForm')
 searchForm.addEventListener('submit', fetchCocktailApi)
 
+const randomButton = document.getElementById('randomButton')
+randomButton.addEventListener('click', fetchRandomApi)
+
 const cocktailTitle = document.getElementById('cocktailTitle')
-const cocktailImg = document.getElementById('cocktailImg')
+let cocktailImg = document.getElementById('cocktailImg')
+cocktailImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
 
 
 function fetchCocktailApi(event) {
@@ -15,12 +19,18 @@ function fetchCocktailApi(event) {
     .then(resp => resp.json())
     // .then(json => console.log(json))
     .then(renderCoctail)
+    searchForm.reset()
 
     
 }
 
+function fetchRandomApi(event){
+    console.log('Random bttn was clicked')
+}
+
+
 function renderCoctail(cocktailJson) {
-    console.log(cocktailJson.drinks[0].strDrink)
+    // console.log(cocktailJson.drinks[0].strDrink)
     cocktailTitle.textContent = cocktailJson.drinks[0].strDrink
     cocktailImg.src = cocktailJson.drinks[0].strDrinkThumb
     // console.log(cocktailJson.drinks.strDrink)
