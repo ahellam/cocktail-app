@@ -8,6 +8,9 @@ const cocktailTitle = document.getElementById('cocktailTitle')
 let cocktailImg = document.getElementById('cocktailImg')
 cocktailImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
 
+const instructions = document.getElementById('instructions')
+const ingredients = document.getElementById('ingredients')
+
 
 function fetchCocktailApi(event) {
     event.preventDefault()
@@ -24,8 +27,14 @@ function fetchCocktailApi(event) {
     
 }
 
-function fetchRandomApi(event){
+function fetchRandomApi(){
     console.log('Random bttn was clicked')
+    const randomURL = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
+
+    fetch(randomURL)
+    .then(resp => resp.json())
+    // .then(json => console.log(json))
+    .then(renderCoctail)
 }
 
 
@@ -33,5 +42,13 @@ function renderCoctail(cocktailJson) {
     // console.log(cocktailJson.drinks[0].strDrink)
     cocktailTitle.textContent = cocktailJson.drinks[0].strDrink
     cocktailImg.src = cocktailJson.drinks[0].strDrinkThumb
+    instructions.textContent = cocktailJson.drinks[0].strInstructions
     // console.log(cocktailJson.drinks.strDrink)
+
+// rendering the ingredients 
+//      set some kind of check on the 'strIngredient' in the json drinks[0] object that checks if its truthy
+//      if the value is !== null then return the strIngredient
+
 }
+
+
