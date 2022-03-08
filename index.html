@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,31 @@
     <script defer src="index.js"></script>
     <title>Cocktail App</title>
 </head>
+
 <body>
     <header id="headerContainer" class="headerContainer">
         <h1 id="headerText" class="headerText">Cocktail App</h1>
-      </header>
-    
+    </header>
+    <div id='main'>
+        <img id="logoImg" class="logoImg" src="DONT KNOW YET.jpg" alt="cocktail app logo image">
+
+        <h2 id="searchTitle" class="">Search for a cocktail</h2>
+
+        <form id='searchForm'>
+            <input id='userInput' type='text' name='search' placeholder="enter cocktail name"> <!-- Question to ask... what happens if cocktail is misspelled? -->
+            <input type='submit' name='submit' />
+        </form>
+
+        <div id='cocktailCard' class="cocktailCard"> <!-- this is where the cocktail name, img and recipe show up -->
+            <h3 id="cocktailTitle" class="coctailTitle">
+            </h3>
+            <img id="coctailImg" class="coctailImg" src="" alt="">
+
+
+        </div>
+
+    </div>
+
 </body>
+
 </html>
