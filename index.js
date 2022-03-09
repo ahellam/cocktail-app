@@ -12,7 +12,8 @@ const cocktailTitle = document.getElementById('cocktailTitle')
 let cocktailImg = document.getElementById('cocktailImg')
 cocktailImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
 
-const instructions = document.getElementById('instructions')
+let instructions = document.getElementById('instructions')
+instructions.textContent= ''
 let ingredients = document.getElementById('ingredients')
 ingredients.textContent = ''
 
@@ -67,12 +68,12 @@ function renderCoctail(cocktailJson) {
 
     cocktailTitle.textContent = cocktailJson.drinks[0].strDrink
     cocktailImg.src = cocktailJson.drinks[0].strDrinkThumb
-    instructions.textContent = cocktailJson.drinks[0].strInstructions
+    instructions.textContent = `Instructions: ${cocktailJson.drinks[0].strInstructions}`
 
 
     let stringredients = [cocktailJson.drinks[0].strIngredient1, cocktailJson.drinks[0].strIngredient2, cocktailJson.drinks[0].strIngredient3, cocktailJson.drinks[0].strIngredient4, cocktailJson.drinks[0].strIngredient5, cocktailJson.drinks[0].strIngredient6, cocktailJson.drinks[0].strIngredient7, cocktailJson.drinks[0].strIngredient8, cocktailJson.drinks[0].strIngredient9, cocktailJson.drinks[0].strIngredient10, cocktailJson.drinks[0].strIngredient11, cocktailJson.drinks[0].strIngredient12, cocktailJson.drinks[0].strIngredient13, cocktailJson.drinks[0].strIngredient14, cocktailJson.drinks[0].strIngredient15]
 
-    console.log(stringredients)
+    // console.log(stringredients)
     ingredients.textContent = 'Ingredients:'
     const ingredientsList = stringredients.filter(ingredient => ingredient !== null)
     ingredientsList.forEach(item => {
