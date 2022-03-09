@@ -39,16 +39,21 @@ function fetchRandomApi(){
 
 
 function renderCoctail(cocktailJson) {
-    // console.log(cocktailJson.drinks[0].strDrink)
+    console.log(cocktailJson.drinks[0])
+    // console.log(cocktailJson.drinks[0].strIngredient1)
+
     cocktailTitle.textContent = cocktailJson.drinks[0].strDrink
     cocktailImg.src = cocktailJson.drinks[0].strDrinkThumb
     instructions.textContent = cocktailJson.drinks[0].strInstructions
-    // console.log(cocktailJson.drinks.strDrink)
 
-// rendering the ingredients 
-//      set some kind of check on the 'strIngredient' in the json drinks[0] object that checks if its truthy
-//      if the value is !== null then return the strIngredient
 
+    let stringredients = [cocktailJson.drinks[0].strIngredient1, cocktailJson.drinks[0].strIngredient2, cocktailJson.drinks[0].strIngredient3, cocktailJson.drinks[0].strIngredient4, cocktailJson.drinks[0].strIngredient5, cocktailJson.drinks[0].strIngredient6, cocktailJson.drinks[0].strIngredient7, cocktailJson.drinks[0].strIngredient8, cocktailJson.drinks[0].strIngredient9, cocktailJson.drinks[0].strIngredient10, cocktailJson.drinks[0].strIngredient11, cocktailJson.drinks[0].strIngredient12, cocktailJson.drinks[0].strIngredient13, cocktailJson.drinks[0].strIngredient14, cocktailJson.drinks[0].strIngredient15]
+
+    console.log(stringredients)
+    const ingredientsList = stringredients.filter(ingredient => ingredient !== null)
+    ingredientsList.forEach(item => {
+        const ingredient = document.createElement('li')
+        ingredient.textContent = item
+        ingredients.append(ingredient)
+    })
 }
-
-
