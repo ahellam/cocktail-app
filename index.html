@@ -10,38 +10,46 @@
     <title>Cocktail App</title>
 </head>
 
-<body>
+<body id="body" class="body">
     <header id="headerContainer" class="headerContainer">
         <h1 id="headerText" class="headerText">Cocktail App</h1>
     </header>
+
+    <!-- <img id="logoImg" class="logoImg" src="https://c4.wallpaperflare.com/wallpaper/149/358/489/sea-beach-cocktail-summer-wallpaper-preview.jpg" alt="cocktail app logo image"> -->
+
     <div id='main'>
-        <img id="logoImg" class="logoImg" src="DONT KNOW YET.jpg" alt="cocktail app logo image">
 
-        <h2 id="searchTitle" class="">Search for a cocktail</h2>
-
-        <form id='searchForm'>
-            <input id='userInput' type='text' name='search' placeholder="enter cocktail name"> <!-- Question to ask... what happens if cocktail is misspelled? -->
-            <input type='submit' name='submit' />
-        </form>
-
-        <button id="randomButton" class="randomButton" title="Random">Pick a random cocktail!</button>
-
-        <div id='cocktailCard' class="cocktailCard"> <!-- this is where the cocktail name, img and recipe show up -->
-            <h3 id="cocktailTitle" class="cocktailTitle">
-            </h3>
-            <img id="cocktailImg" class="cocktailImg" src="" alt="">
-            <ul id="ingredients" class="ingredients">
-                Ingredients:
-            </ul>
-            <p id="instructions" class="instructions">
-                
-            </p>
-
-
+        <div id="searchAndRandom" class="searchAndRandom">
+        
+            <h2 id="searchTitle" class="">Search for a cocktail</h2>
+    
+            <form id='searchForm'>
+                <input id='userInput' type='text' name='search' placeholder="enter cocktail name"> <!-- Question to ask... what happens if cocktail is misspelled? -->
+                <input type='submit' name='submit' />
+            </form>
+    
+            <button id="randomButton" class="randomButton" title="Random">Pick a random cocktail!</button>
+            </div>
+    
+            <div id='cocktailCard' class="cocktailCard"> <!-- this is where the cocktail name, img and recipe show up -->
+                <h3 id="cocktailTitle" class="cocktailTitle">
+                </h3>
+                <img id="cocktailImg" class="cocktailImg" src="" alt="">
+                <ul id="ingredients" class="ingredients">
+                    Ingredients:
+                </ul>
+                <p id="instructions" class="instructions">
+                    
+                </p>
+    
+    
+            </div>
+            <div id="favorites" class="favorites">
+                favorites go here
+            </div>
+    
         </div>
-
-    </div>
-
-</body>
-
-</html>
+    
+    </body>
+    
+    </html>
