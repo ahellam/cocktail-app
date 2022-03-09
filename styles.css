@@ -1,9 +1,11 @@
 /* .headerContainer{
     text-align: center;
 } */
-
+/* .body{
+  
+} */
 .headerText{
-    font-size: 400%;
+    /* font-size: 400%; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: auto;
     text-align: center;
@@ -13,10 +15,13 @@
 }
 /* trying to make this image centered on the page */
 .logoImg {               
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    /* display: block; */
+    margin-left: 28%;
+
+    height: 300px;
+    width: 600px;
+    overflow: hidden;
+
   }
 
   #searchTitle {

@@ -9,7 +9,8 @@ let cocktailImg = document.getElementById('cocktailImg')
 cocktailImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
 
 const instructions = document.getElementById('instructions')
-const ingredients = document.getElementById('ingredients')
+let ingredients = document.getElementById('ingredients')
+ingredients.textContent = ''
 
 
 function fetchCocktailApi(event) {
@@ -50,6 +51,7 @@ function renderCoctail(cocktailJson) {
     let stringredients = [cocktailJson.drinks[0].strIngredient1, cocktailJson.drinks[0].strIngredient2, cocktailJson.drinks[0].strIngredient3, cocktailJson.drinks[0].strIngredient4, cocktailJson.drinks[0].strIngredient5, cocktailJson.drinks[0].strIngredient6, cocktailJson.drinks[0].strIngredient7, cocktailJson.drinks[0].strIngredient8, cocktailJson.drinks[0].strIngredient9, cocktailJson.drinks[0].strIngredient10, cocktailJson.drinks[0].strIngredient11, cocktailJson.drinks[0].strIngredient12, cocktailJson.drinks[0].strIngredient13, cocktailJson.drinks[0].strIngredient14, cocktailJson.drinks[0].strIngredient15]
 
     console.log(stringredients)
+    ingredients.textContent = 'Ingredients:'
     const ingredientsList = stringredients.filter(ingredient => ingredient !== null)
     ingredientsList.forEach(item => {
         const ingredient = document.createElement('li')
