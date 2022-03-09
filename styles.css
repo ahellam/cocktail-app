@@ -8,6 +8,8 @@
     /* font-size: 400%; */
 
     width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
     border-style: double;
     border-width: .5ch;
@@ -33,16 +35,21 @@
   }
 
   .randomButton{
+    margin-left: 10%;
     padding: 1px 10px;
     font-size: 15px;
+  }
 
-    /* need to figure out how to center! */
+  .favoriteButton{
+    margin-left: 73%;
+    padding: 1px 10px;
+    font-size: 15px;
   }
 
   .cocktailCard{
     width: 80%;
     margin-left: 10%;
-    margin-right: ;
+    margin-right: 10%;
     text-align: center;
     border-style: double;
     border-width: .5ch;
@@ -50,6 +57,10 @@
   }
 
   .cocktailImg{
-      width: 400px;
-      height: 400px;
+      width: 300px;
+      height: 300px;
+  }
+
+  .favorites{
+    margin-left: 10%;
   }
