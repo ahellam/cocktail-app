@@ -56,18 +56,4 @@ function renderCoctail(cocktailJson) {
         ingredient.textContent = item
         ingredients.append(ingredient)
     })
-
-    // if (cocktailJson.drinks[0].strIngredient1 !== null)
-
-// rendering the ingredients 
-//      set some kind of check on the 'strIngredient' in the json drinks[0] object that checks if its truthy
-//      if the value is !== null then return the strIngredient
-
 }
-
-
-// function renderIngredients(ingredients) {
-//     console.log(ingredients)
-//     const ingredient = document.createElement('li')
-
-// }
