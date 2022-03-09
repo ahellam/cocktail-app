@@ -75,8 +75,11 @@ function renderCoctail(cocktailJson) {
 
     // console.log(stringredients)
     ingredients.textContent = 'Ingredients:'
+    ingredients.style.border = '.5ch double black'
     const ingredientsList = stringredients.filter(ingredient => ingredient !== null)
-    ingredientsList.forEach(item => {
+    console.log(ingredientsList)
+    const filteredIngredientsList = ingredientsList.filter(ingredient => ingredient.length > 1)
+    filteredIngredientsList.forEach(item => {
         const ingredient = document.createElement('li')
         ingredient.textContent = item
         ingredients.append(ingredient)

@@ -2,30 +2,32 @@
     text-align: center;
 } */
 .body{
+  /* padding: 0 1em; */
+  height: 90vh;
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .headerText{
     /* font-size: 400%; */
-
     width: auto;
+
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
     border-style: double;
-    border-width: .5ch;
-    
+    border-width: .5ch;   
 }
-/* trying to make this image centered on the page */
-.logoImg {               
-    /* display: block; */
-    margin-left: 28%;
+.main{
+  height: 90vh;
+}
 
+/* trying to make this image centered on the page */
+/* .logoImg {               
+    margin-left: 28%;
     height: 300px;
     width: 600px;
     overflow: hidden;
-
-  }
+  } */
 
   #searchTitle {
       text-align: center;
@@ -35,39 +37,46 @@
     text-align: center;
   }
 
+  .buttonsDiv{
+    padding: 0 .001em;
+  }
+
   .randomButton{
+    height: 1;
     margin-left: 10%;
     padding: 1px 10px;
     font-size: 15px;
   }
 
   .favoriteButton{
-    margin-left: 73%;
+    /* margin-left: 73%; */
+    float: right;
+    margin-right: 10%;
     padding: 1px 10px;
     font-size: 15px;
   }
 
   .cocktailCard{
-
-    width: 80%;
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
     border-style: double;
     border-width: .5ch;
-
   }
 
   .cocktailImg{
+      max-width: 100%;
       width: 300px;
       height: 300px;
   }
+
   .ingredients{
-    text-align: left;
-    width: 50%;
+    text-align: center;
+    width: 25%;
     margin-left: 35%;
-    margin-right: 15%;
+    margin-right: 35%;
   }
+
   .favorites{
     margin-left: 10%;
   }
