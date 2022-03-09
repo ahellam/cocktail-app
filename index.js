@@ -4,6 +4,10 @@ searchForm.addEventListener('submit', fetchCocktailApi)
 const randomButton = document.getElementById('randomButton')
 randomButton.addEventListener('click', fetchRandomApi)
 
+const favoriteButton = document.getElementById('favoriteButton')
+const favoritesList = document.getElementById('savedCocktails')
+
+
 const cocktailTitle = document.getElementById('cocktailTitle')
 let cocktailImg = document.getElementById('cocktailImg')
 cocktailImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
@@ -11,6 +15,8 @@ cocktailImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
 const instructions = document.getElementById('instructions')
 let ingredients = document.getElementById('ingredients')
 ingredients.textContent = ''
+
+
 
 
 function fetchCocktailApi(event) {
@@ -21,7 +27,14 @@ function fetchCocktailApi(event) {
     // console.log(searchURL)
     fetch(searchURL)
     .then(resp => resp.json())
-    // .then(json => console.log(json))
+    // .then(console.log)
+    .then(json => {
+        if (json.drinks === null ) {
+          alert('THATS NOT A COCKTAIL');
+        }
+        return json;
+      })
+    
     .then(renderCoctail)
     searchForm.reset()
 
@@ -38,10 +51,19 @@ function fetchRandomApi(){
     .then(renderCoctail)
 }
 
+favoriteButton.addEventListener('click', saveToFavorites)
+function saveToFavorites(){
+    // console.log(cocktailTitle.textContent)
+    const li = document.createElement('li')
+    li.textContent = cocktailTitle.textContent
+    favoritesList.append(li) 
+}
 
 function renderCoctail(cocktailJson) {
     console.log(cocktailJson.drinks[0])
     // console.log(cocktailJson.drinks[0].strIngredient1)
+
+
 
     cocktailTitle.textContent = cocktailJson.drinks[0].strDrink
     cocktailImg.src = cocktailJson.drinks[0].strDrinkThumb
@@ -58,4 +80,9 @@ function renderCoctail(cocktailJson) {
         ingredient.textContent = item
         ingredients.append(ingredient)
     })
+
+
+
+
+
 }

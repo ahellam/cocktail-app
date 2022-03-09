@@ -21,7 +21,7 @@
 
         <div id="searchAndRandom" class="searchAndRandom">
         
-            <h2 id="searchTitle" class="">Search for a cocktail</h2>
+            <h3 id="searchTitle" class="">Search for a cocktail</h3>
     
             <form id='searchForm'>
                 <input id='userInput' type='text' name='search' placeholder="enter cocktail name"> <!-- Question to ask... what happens if cocktail is misspelled? -->
@@ -29,6 +29,8 @@
             </form>
     
             <button id="randomButton" class="randomButton" title="Random">Pick a random cocktail!</button>
+            <button id="favoriteButton" class="favoriteButton" title="Favorite">Save this cocktail as a favorite!</button>
+            
             </div>
     
             <div id='cocktailCard' class="cocktailCard"> <!-- this is where the cocktail name, img and recipe show up -->
@@ -45,7 +47,10 @@
     
             </div>
             <div id="favorites" class="favorites">
-                favorites go here
+                Favorite Cocktails:
+                <ul id="savedCocktails" class="savedCocktails">
+                    
+                </ul>
             </div>
     
         </div>
