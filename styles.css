@@ -4,21 +4,29 @@
 .body{
   /* padding: 0 1em; */
   height: 90vh;
+  background-color: rgb(218, 135, 11);
+  max-width: 80rem;
+  
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .headerText{
     /* font-size: 400%; */
-    width: auto;
-
+    
+    background-color: rgb(250, 227, 193);
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
     border-style: double;
     border-width: .5ch;   
+    border-color: black;
+
+    
 }
 .main{
   height: 90vh;
+  margin: 0 auto;
+  /* max-width: 60rem; */
 }
 
 /* trying to make this image centered on the page */
@@ -42,10 +50,10 @@
   }
 
   .randomButton{
-    height: 1;
+    /* height: 1; */
     margin-left: 10%;
     padding: 1px 10px;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .favoriteButton{
@@ -53,30 +61,54 @@
     float: right;
     margin-right: 10%;
     padding: 1px 10px;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .cocktailCard{
+    
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
     border-style: double;
-    border-width: .5ch;
+    border-width: 1ch;
+    background-color: rgb(250, 227, 193);
   }
 
   .cocktailImg{
       max-width: 100%;
       width: 300px;
       height: 300px;
+      border-style: double;
+      border: 1ch;
   }
 
   .ingredients{
+    /* float: right ; */
     text-align: center;
-    width: 25%;
-    margin-left: 35%;
-    margin-right: 35%;
+    
+    width: 20%;
+    display: block;
+    margin-left: 35.5%;
+    /* margin-right: 45%; */
+    background-color: rgb(250, 227, 193);
+    list-style-type:none;
+    padding-right: 30px;
+    
+  }
+
+  .ingLi{
+    
+ 
+    padding-right: 30px;
   }
 
   .favorites{
     margin-left: 10%;
+    float: left;
+    max-width: 80%;
+  }
+  .li {
+    display: inline-block;
+    padding: 4px;
+
   }
