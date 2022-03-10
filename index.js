@@ -56,7 +56,9 @@ favoriteButton.addEventListener('click', saveToFavorites)
 function saveToFavorites(){
     // console.log(cocktailTitle.textContent)
     const li = document.createElement('li')
-    li.textContent = cocktailTitle.textContent
+    li.className = 'li'
+    li.textContent = ` ♥ ${cocktailTitle.textContent}  `
+    
     favoritesList.append(li) 
 }
 
@@ -68,6 +70,7 @@ function renderCoctail(cocktailJson) {
 
     cocktailTitle.textContent = cocktailJson.drinks[0].strDrink
     cocktailImg.src = cocktailJson.drinks[0].strDrinkThumb
+    cocktailImg.style.border = '1ch double black '
     instructions.textContent = `Instructions: ${cocktailJson.drinks[0].strInstructions}`
 
 
@@ -75,13 +78,17 @@ function renderCoctail(cocktailJson) {
 
     // console.log(stringredients)
     ingredients.textContent = 'Ingredients:'
-    ingredients.style.border = '.5ch double black'
+    ingredients.style.fontStyle = 'italic'
+    ingredients.style.border = '1ch double black'
+    
+    
     const ingredientsList = stringredients.filter(ingredient => ingredient !== null)
     console.log(ingredientsList)
     const filteredIngredientsList = ingredientsList.filter(ingredient => ingredient.length > 1)
     filteredIngredientsList.forEach(item => {
         const ingredient = document.createElement('li')
-        ingredient.textContent = item
+        ingredient.className = 'ingLi'
+        ingredient.textContent = ` ⇒  ${item}`
         ingredients.append(ingredient)
     })
 
