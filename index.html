@@ -17,9 +17,9 @@
 
     <!-- <img id="logoImg" class="logoImg" src="https://c4.wallpaperflare.com/wallpaper/149/358/489/sea-beach-cocktail-summer-wallpaper-preview.jpg" alt="cocktail app logo image"> -->
 
-    <div id='main'>
+    <div id='main' class="main">
 
-        <div id="searchAndRandom" class="searchAndRandom">
+        <div id="search" class="search">
         
             <h3 id="searchTitle" class="">Search for a cocktail</h3>
     
@@ -27,11 +27,12 @@
                 <input id='userInput' type='text' name='search' placeholder="enter cocktail name"> <!-- Question to ask... what happens if cocktail is misspelled? -->
                 <input type='submit' name='submit' />
             </form>
-    
+        </div>
+
+        <div id="buttonsDiv" class="buttonsDiv">
             <button id="randomButton" class="randomButton" title="Random">Pick a random cocktail!</button>
             <button id="favoriteButton" class="favoriteButton" title="Favorite">Save this cocktail as a favorite!</button>
-            
-            </div>
+        </div>
     
             <div id='cocktailCard' class="cocktailCard"> <!-- this is where the cocktail name, img and recipe show up -->
                 <h3 id="cocktailTitle" class="cocktailTitle">
@@ -43,9 +44,8 @@
                 <p id="instructions" class="instructions">
                     Instructions go here
                 </p>
-    
-    
             </div>
+
             <div id="favorites" class="favorites">
                 Favorite Cocktails:
                 <ul id="savedCocktails" class="savedCocktails">
@@ -53,8 +53,10 @@
                 </ul>
             </div>
     
-        </div>
+    </div>
     
     </body>
     
     </html>
+    
+    
