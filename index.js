@@ -63,6 +63,7 @@ function saveToFavorites(){
 }
 
 function renderCoctail(cocktailJson) {
+    console.log('coctailJson:', cocktailJson)
     // console.log('cocktail json index [0]:', cocktailJson.drinks[0])
     // console.log(cocktailJson.drinks[0].strIngredient1)
 
@@ -119,27 +120,9 @@ function renderCoctail(cocktailJson) {
 
 
 
-// const correctIngredients = []
 
-// const testObj = {
-//     name: 'aaron', 
-//     favDrink: 'manhattan', 
-//     ingredient1: '12',
-//     ingredient2: '22',
-//     ingredient3: '32',
-//     ingredient4: "",
-//     ingredient5: null, 
-
-// }
-// for (const property in testObj) {
-//     // if (property.startsWith('ingredient') && testObj[property] !== null && testObj[property].length > 1)
-//     if (property.startsWith('ingredient') && testObj[property])   // <==========look at this tho....
-    
-//     {
-//     console.log(`${testObj[property]}`);
-//     correctIngredients.push(testObj[property])
-//     console.log (correctIngredients)
-//     }
-//   }
 
   
+
+
+
